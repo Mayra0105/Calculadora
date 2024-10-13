@@ -1,0 +1,147 @@
+/* Estilos globales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #e7e6e6;
+}
+  
+
+/* Contenedor de la calculadora */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+    
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: 120px repeat(5, 80px);
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Pantalla de la calculadora */
+.display {
+    grid-column: 1 / -1;
+    background-color: #f8f8f8;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 1.8em;
+    overflow: hidden;
+    transition: box-shadow 0.3s;
+}
+
+/* Efecto de brillo en la pantalla */
+.display:hover {
+    box-shadow: 0 0 15px rgba(255, 223, 186, 0.5);
+}
+
+/* Botones de la calculadora */
+button {
+    cursor: pointer;
+    margin: 5px;
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background-color: #e0e0e0;
+    color: #333;
+    font-size: 1.2em;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Efecto de rebote en los botones */
+button:hover {
+    background-color: #d5d5d5;
+    transform: scale(1.1);
+}
+
+button:active {
+    background-color: #c0c0c0;
+    transform: scale(0.95);
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:focus {
+    outline: none;
+}
+
+/* Botones especiales */
+.operador {
+    background-color: #ff8b8b;
+    color: #fff;
+}
+
+.operador:hover {
+    background-color: #ff6b6b;
+}
+
+.operador:active {
+    background-color: #ff4d4d;
+}
+
+/* Botón de doble tamaño */
+.col-2 {
+    grid-column: span 2;
+}
+
+/* Botones numéricos */
+.numero {
+    background-color: #ffffff;
+}
+
+/* Ajuste del tamaño de la pantalla */
+#valor-anterior {
+    font-size: 0.75em;
+    color: #666;
+}
+
+#valor-actual {
+    font-size: 1.5em;
+}
+
+/* Botón de borrar y borrar todo */
+.borrar {
+    grid-column: 1;
+    background-color: #9a7070;
+    color: #fff;
+}
+
+.borrar:hover {
+    background-color: #ff6b6b;
+}
+
+.borrar:active {
+    background-color: #ff4d4d;
+}
+
+.borrar-todo {
+    grid-column: 2 / 4;
+    background-color: #ff8b8b;
+    color: #fff;
+}
+
+.borrar-todo:hover {
+    background-color: #ff6b6b;
+}
+
+.borrar-todo:active {
+    background-color: #ff4d4d;
+}
